@@ -11,7 +11,8 @@ body {
 
 #container {
   max-width: 960px;
-  background: #fff;
+  background: radial-gradient( lightgray,steelblue);
+
   margin: 0 auto;
 }
 
@@ -24,15 +25,18 @@ p {
 
 a {
   text-decoration: none;
-  color: #39add1;
+  color: saddlebrown;
   font-weight: 700;
   }
+
   a:hover {
-    color: #111;
+    color: #EAAA7F;
+    transition: 1s;
   }
 
   a:hover .st0 {
-    fill: #111;
+    fill:#EAAA7F;
+    transition: 1s;
   }
 
 header {
@@ -82,9 +86,14 @@ footer {
 }
 
 
-.Layer_1 {
+.Layer_1-1,
+.Layer_1-2,
+.Layer_1  {
   height: 150px;
   width:150px;
+}
+
+.Layer_1 {
 }
 
 .Layer_2 {
@@ -92,29 +101,35 @@ footer {
   width: 15px;
 }
 
-a:hover st0 {
- 
+
+.Layer_1-1:hover {
+  transform: rotate(-45deg) scale(.8) ;
+  transition: 1s;
 }
 
-.Layer_1:hover {
-  transform: rotate(-360deg) ;
+.Layer_1-2:hover {
+  transform: rotate(45deg) scale(.8) ;
   transition: 1s;
 }
 
 .paw {
   transform-origin: 50% 50%;
+   transition: 1s;
 } 
 .Layer_1:hover .paw {
   transform: scale(1.2)rotate(360deg); ;
-  transition: 1s;
+ 
 }
-
+h1,h2 {
+  font-size: 24px;
+  color:#EAAA7F;
+}
 
 /************** Logos and corgi dog colors ******************/
 
   /*Home, location & contact logo color*/
 
- .st0{fill:#39ADD1;}
+ .st0{fill:saddlebrown;}
 
   /*Paw logo colors */
  .st0-0{fill:#BA8058;}
@@ -143,7 +158,54 @@ a:hover st0 {
   .st1-4{fill:#52595F;}
   .st2-4{fill:#FBFEFF;}
   .st3-4{fill:#2D3339;}
+ 
 
+
+  footer {
+ font-weight: bold;
+  color: black;
+  }
+ 
+
+ /*Keyframes*/
+
+@keyframes effect {
+
+
+ 25%{
+  transform: scale(.5) ;
+ }
+
+  50%{
+  transform: scale(1.1) ;
+ }
+
+  75%{
+  transform: scale(1.6) ;
+ }
+
+}
+
+
+.Layer_1, .Layer_2  {
+  animation: effect 1s ease-out backwards;
+}
+
+@media screen and (min-width: 420px ) {
+
+    .text{
+      display: none;
+    }
+ }
+
+
+
+ @media screen and (max-width: 420px ) {
+
+    .logo-text{
+      display: none;
+    }
+ }
 
 
 
