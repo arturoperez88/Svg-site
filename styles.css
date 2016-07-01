@@ -105,11 +105,13 @@ footer {
 .Layer_1-1:hover {
   transform: rotate(-45deg) scale(.8) ;
   transition: 1s;
+  cursor: pointer;
 }
 
 .Layer_1-2:hover {
   transform: rotate(45deg) scale(.8) ;
   transition: 1s;
+  cursor: pointer;
 }
 
 .paw {
@@ -170,26 +172,37 @@ h1,h2 {
  /*Keyframes*/
 
 @keyframes effect {
+  0%{
+  transform: scale(.0) ;
+ }
 
-
- 25%{
+  25%{
   transform: scale(.5) ;
  }
+
 
   50%{
   transform: scale(1.1) ;
  }
 
   75%{
-  transform: scale(1.6) ;
+  transform: scale(.5) ;
+ }
+
+   100%{
+  transform: scale(1.1) ;
  }
 
 }
 
-
-.Layer_1, .Layer_2  {
+.Layer_1,
+.Layer_1-1,
+.Layer_1-2, 
+.Layer_2  {
   animation: effect 1s ease-out backwards;
 }
+
+
 
 @media screen and (min-width: 420px ) {
 
